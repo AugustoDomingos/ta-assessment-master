@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Tue Oct 13 07:29:50 BRT 2020
+total=60000
+threadAverage=60000
+threads=1
+stories/loginStartupJediWebsite.story=60000

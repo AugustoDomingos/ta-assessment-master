@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>stories.searchGoogle</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories/searchGoogle.story</div>
+<div class="scenario">
+<h2>Scenario: User logs in with email using valid credentials</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given I am on startup jedi main page</div>
+<div class="step">When I click on log in button</div>
+<div class="step">And I click on log in with email button</div>
+<div class="step">And I enter credentials 'userEmail' and 'userPassword'</div>
+<div class="step">Then I should log in successfully with 'userId'</div>
+<table>
+<thead>
+<tr>
+<th>userEmail</th><th>userPassword</th><th>userId</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>gutoh.domingos@gmail.com</td><td>test@123</td><td>Guto Domingos</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {userEmail=gutoh.domingos@gmail.com, userPassword=test@123, userId=Guto Domingos}</h3>
+<div class="step successful">Given I am on startup jedi main page</div>
+<div class="step successful">When I click on log in button</div>
+<div class="step successful">And I click on log in with email button</div>
+<div class="step successful">And I enter credentials 'userEmail' and 'userPassword'</div>
+<div class="step failed">Then I should log in successfully with 'userId' <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because &quot;this.val$elements&quot; is null</span><br/><a color="black" target="jb_scn_shot" href="../screenshots/failed-scenario-a4aa8858-2245-40bb-8021-7e186197de90.png"><img src="images/failing_screenshot.png" alt="failing screenshot"/></a></div>
+</div>
+</div>
+<div class="scenario">
+<h2>Scenario: User logs in with valid email and invalid password</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given I am on startup jedi main page</div>
+<div class="step">When I click on log in button</div>
+<div class="step">And I click on log in with email button</div>
+<div class="step">And I enter credentials 'userEmail' and 'userPassword'</div>
+<div class="step">Then I should not log in successfully with 'userId'</div>
+<table>
+<thead>
+<tr>
+<th>userEmail</th><th>userPassword</th><th>userId</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>gutoh.domingos@gmail.com</td><td>123</td><td>Guto Domingos</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {userEmail=gutoh.domingos@gmail.com, userPassword=123, userId=Guto Domingos}</h3>
+<div class="step successful">Given I am on startup jedi main page</div>
+<div class="step successful">When I click on log in button</div>
+<div class="step successful">And I click on log in with email button</div>
+<div class="step successful">And I enter credentials 'userEmail' and 'userPassword'</div>
+<div class="step failed">Then I should not log in successfully with 'userId' <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.NullPointerException: Cannot invoke &quot;java.util.List.iterator()&quot; because &quot;this.val$elements&quot; is null</span><br/><a color="black" target="jb_scn_shot" href="../screenshots/failed-scenario-d9c9a4d2-bfa2-4ad9-b5a2-596511a87654.png"><img src="images/failing_screenshot.png" alt="failing screenshot"/></a></div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
